@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["crates/*", "examples/demo"]
+
+# Hardened release profile applied workspace-wide. The `#[protect]` payloads are
+# verified to survive all of these (LTO, single codegen unit, symbol stripping).
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

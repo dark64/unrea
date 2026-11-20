@@ -1,0 +1,13 @@
+[package]
+name = "unrea-macros"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Proc-macro companion to `unrea`"
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+unrea = { path = "../unrea" }

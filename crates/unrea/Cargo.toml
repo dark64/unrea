@@ -1,0 +1,20 @@
+[package]
+name = "unrea"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Anti-reverse-engineering / anti-LLM-analysis toolkit: embed model-aware markers and adversarial payloads to defend code against agentic reverse engineering and LLM code analysis."
+license = "MIT"
+keywords = ["obfuscation", "anti-reverse", "prompt-injection", "llm", "security"]
+categories = ["cryptography", "development-tools"]
+readme = "README.md"
+
+[lib]
+name = "unrea"
+path = "src/lib.rs"
+
+[dependencies]
+# the core is std-only and dependency-free
+
+[dev-dependencies]
+unrea-macros = { path = "../unrea-macros" }
